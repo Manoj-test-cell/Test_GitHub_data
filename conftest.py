@@ -5,6 +5,7 @@ import pytest
 def test_browser():
     with sync_playwright as p:
         browser = p.chromium.launch()
+        print("in browser")
         yield browser
         browser.close()
 
